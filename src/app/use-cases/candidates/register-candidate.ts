@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { Candidate } from 'src/app/entities/candidate';
-import { CandidatesRepository } from 'src/app/repositories/candidates-repository';
+import { Candidate } from '@app/entities/candidate';
+import { CandidatesRepository } from '@app/repositories/candidates-repository';
 import { CandidateAlreadyExists } from './errors/candidate-already-exists';
-import { CryptProvider } from 'src/app/providers/crypt-provider';
+import { CryptProvider } from '@app/providers/crypt-provider';
 
 type RegisterCandidateRequest = {
   firstName: string;
