@@ -1,8 +1,7 @@
+import { GlobalModule } from '@infra/global.module';
 import { Module } from '@nestjs/common';
 
 @Module({
-  imports: [],
-  controllers: [],
-  providers: [],
+  imports: [GlobalModule],
 })
 export class AppModule {}

@@ -25,7 +25,7 @@ export class Candidate {
       workEmail: props.workEmail,
       password: props.password,
       createdAt: props.createdAt ?? currentDate,
-      updatedAt: currentDate,
+      updatedAt: props.updatedAt ?? currentDate,
     };
   }
 
