@@ -4,7 +4,6 @@ import { Candidate as PrismaCandidate } from '@prisma/client';
 export class PrismaCandidateMapper {
   static toPrisma(candidate: Candidate): PrismaCandidate {
     return {
-      id: candidate.id,
       firstName: candidate.firstName,
       lastName: candidate.lastName,
       company: candidate.company,
@@ -13,7 +12,7 @@ export class PrismaCandidateMapper {
       password: candidate.password,
       createdAt: candidate.createdAt,
       updatedAt: candidate.updatedAt,
-    };
+    } as PrismaCandidate;
   }
 
   static toDomain(candidate: PrismaCandidate): Candidate {
