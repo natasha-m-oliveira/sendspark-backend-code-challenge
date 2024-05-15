@@ -29,4 +29,16 @@ export class PrismaCandidatesRepository extends CandidatesRepository {
 
     return PrismaCandidateMapper.toDomain(candidate);
   }
+
+  async findById(id: string): Promise<Candidate | null> {
+    const candidate = await this.prisma.candidate.findUnique({
+      where: {
+        id: id,
+      },
+    });
+
+    if (!candidate) return null;
+
+    return PrismaCandidateMapper.toDomain(candidate);
+  }
 }
