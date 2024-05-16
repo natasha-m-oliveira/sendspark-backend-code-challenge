@@ -1,6 +1,6 @@
 import { randomUUID } from 'crypto';
-import { Candidate } from 'src/app/entities/candidate';
-import { CandidatesRepository } from 'src/app/repositories/candidates-repository';
+import { Candidate } from '@app/entities/candidate';
+import { CandidatesRepository } from '@app/repositories/candidates-repository';
 
 export class InMemoryCandidatesRepository implements CandidatesRepository {
   public readonly candidates: Candidate[] = [];

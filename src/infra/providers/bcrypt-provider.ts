@@ -1,5 +1,5 @@
 import { compare, hash } from 'bcrypt';
-import { CryptProvider } from 'src/app/providers/crypt-provider';
+import { CryptProvider } from '@app/providers/crypt-provider';
 
 export class BcryptProvider implements CryptProvider {
   compare(data: string, hash: string): Promise<boolean> {
