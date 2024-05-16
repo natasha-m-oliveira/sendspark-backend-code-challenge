@@ -20,15 +20,5 @@
                 "DELETE"
             ]
         }
-    ],
-    "rewrites": [
-        {
-            "source": "@app/(.*)",
-            "destination": "<destination>/app/$1"
-        },
-        {
-            "source": "@infra/(.*)",
-            "destination": "<destination>/infra/$1"
-        }
     ]
 }
